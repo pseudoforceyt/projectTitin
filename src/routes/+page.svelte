@@ -1,5 +1,5 @@
 <!-- The button to open modal -->
-<label for="my-modal-6" class="btn">What am I?</label>
+<label for="my-modal-6" class="btn">What in the cinnamon toast ken is this?</label>
 
 <!-- Put this part before </body> tag -->
 <input type="checkbox" id="my-modal-6" class="modal-toggle" />
