@@ -1,10 +1,14 @@
-<!--h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p-->
-    <div class="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
-        <p class="text-3xl text-gray-700 font-bold mb-5">
-           Welcome!
-        </p>
-        <p class="text-gray-500 text-lg">
-           SvelteKit and Tailwind CSS in action
-        </p>
+<!-- The button to open modal -->
+<label for="my-modal-6" class="btn">What am I?</label>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my-modal-6" class="modal-toggle" />
+<div class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Abput projectTitin</h3>
+    <p class="py-4">This website (webapp) aims to provide completely free Physics, Chemistry and Maths interactive and immersive notes related to JEE syllabus.</p>
+    <div class="modal-action">
+      <label for="my-modal-6" class="btn">Okay</label>
     </div>
+  </div>
+</div>
