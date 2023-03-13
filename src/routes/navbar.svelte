@@ -1,32 +1,31 @@
-<script>
-  import { onMount } from "svelte";
-  import { classList } from "daisyui";
-
-  let isOpen = false;
-  let menuClasses = "";
-
-  const toggle = () => {
-    isOpen = !isOpen;
-  };
-
-  onMount(() => {
-    menuClasses = classList({
-      "navbar-menu": true,
-      "block": isOpen,
-      "hidden": !isOpen,
-    });
-  });
-
-  $: {
-    menuClasses = classList({
-      "navbar-menu": true,
-      "block": isOpen,
-      "hidden": !isOpen,
-    });
-  }
-</script>
-
 <template>
+  <script>
+    import { onMount } from "svelte";
+    import { classList } from "daisyui";
+  
+    let isOpen = false;
+    let menuClasses = "";
+  
+    const toggle = () => {
+      isOpen = !isOpen;
+    };
+  
+    onMount(() => {
+      menuClasses = classList({
+        "navbar-menu": true,
+        "block": isOpen,
+        "hidden": !isOpen,
+      });
+    });
+  
+    $: {
+      menuClasses = classList({
+        "navbar-menu": true,
+        "block": isOpen,
+        "hidden": !isOpen,
+      });
+    }
+  </script>
   <nav class="navbar bg-primary">
     <div class="navbar-brand">
       <a href="#" class="navbar-item text-2xl font-bold text-white">
