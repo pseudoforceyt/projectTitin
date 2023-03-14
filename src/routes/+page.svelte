@@ -3,8 +3,8 @@
     import { onMount } from "svelte";
     import { classList } from "daisyui";
   
-    let isOpen = false;
-    let menuClasses = "";
+    export let isOpen = false;
+    export let menuClasses = "";
   
     const toggle = () => {
       isOpen = !isOpen;
@@ -32,7 +32,7 @@
         <a href="#" class="navbar-item text-2xl font-bold text-white">
           projectTitin
         </a>
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" on:click={toggle}>
+        <a href="#" role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" on:click={toggle}>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
