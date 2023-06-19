@@ -1,0 +1,134 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.tabTitle }}</title>
+    <meta name="description" content="{{ page.ogDesc }}">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/media/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/media/apple-touch-icon.png">
+
+    <!-- don't show this site on search engines -->
+    {% if site.showinSearchEngines == true %}
+        <meta name="robots" content="index">
+    {% else %}
+        <meta name="robots" content="noindex">
+    {% endif %}
+
+    <!-- css and fonts -->
+    <link href="{{ site.baseurl }}/assets/styles.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="{{ site.baseurl }}/assets/micromodal.custom.css" rel="stylesheet">
+
+    <!-- set chrome and embed site color -->
+    <meta name="theme-color" content="#272727">
+
+    <!-- social media -->
+    <meta property="og:title" content="{{ page.ogTitle }}">
+    <meta property="og:description" content="{{ page.ogDesc }}">
+    <meta property="og:image" content="{{ page.ogImg }}">
+    <meta property="og:url" content="{{ site.url }}/{{ page.ogURL }}">
+    
+</head>
+
+<body style="min-height:100vh;">
+    <!-- navbar -->
+    <nav class="flex items-center justify-between flex-wrap bg-transparent p-6">
+        <a href="{{ site.baseurl }}/">
+            <div class="flex items-center flex-shrink-0 text-white mr-6 select-none">
+                <img src="{{ site.baseurl }}{{ site.siteIcon }}" class="mr-4 rounded shadow" width="30px" alt="{{ site.serverName }}">
+                <span class="font-semibold text-xl tracking-tight hidden md:block" id="serverLogoName">{{ site.serverName }}</span>
+                {% if site.siteNav %}
+                    <div class="text-transparent select-none px-0 md:px-4 pb-1">
+                        <div id="serverInd">&#11044;</div>
+                    </div>
+                {% endif %}
+            </div>
+        </a>
+        <div class="block flex-grow flex items-center w-auto">
+            
+            {% if site.siteNav %}
+                <div class="text-base flex-grow text-right pb-1 lg:pb-0">
+                    <!-- Home link only on lg -->
+                    <a href="{{ site.baseurl }}/" rel="noopener" class="hidden lg:block lg:inline-block {% if page.navname == "Home" %}text-white{% else %}text-teal-200 hover:text-white{% endif %} mr-4">
+                        Home
+                    </a>
+                    {% for nlink in site.siteNav %}
+                        <a href="{{ site.baseurl }}/{{ nlink.url }}" rel="noopener" {% if nlink.newtab == true %}target="_blank" {% endif %}class="block inline-block {% if page.navname == nlink.name %}text-white{% else %}text-teal-200 hover:text-white{% endif %} mr-4">
+                            {{ nlink.name }}
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+        </div>
+        
+        <!-- show status if no siteNav -->
+        {% if site.siteNav %}{% else %}
+        <div id="serverStatus" class="text-gray-200 hidden md:block cursor-pointer"></div>
+        {% endif %}
+
+        {% if site.siteNav %}{% else %}
+        <!-- only show mobile status if no siteNav -->
+        <div class="block md:hidden">
+            <div id="serverStatusM" class="text-gray-200 py-2 md:py-4"></div>
+        </div>
+
+        <!-- show loading for status API only if javascript is enabled -->
+        <script>
+            document.getElementById("serverStatus").innerHTML = "Loading...";
+            document.getElementById("serverStatusM").innerHTML = "Loading...";
+        </script>
+        {% endif %}
+
+    </nav>
+
+    {{ content }}
+
+    <div class="layoutfooter w-full pb-8 text-center transition duration-200">
+        <!-- Image in background is not actual gameplay &middot; -->
+        <a href="https://github.com/coffeebank/moonrise" rel="noopener" title="Moonrise by coffeebank" class="hover:text-gray-400">Template made with ❤️ by michael momochi ☕</a> &middot; 
+        <a href="{% if site.siteFooterlink %}{{ site.baseurl }}{{ site.siteFooterlink }}{% else %}{{ site.baseurl }}/about{% endif %}" rel="noopener" title="Legal" class="hover:text-gray-400">&copy; {{ site.siteYear }}<script>new Date().getFullYear()>{{ site.siteYear }}&&document.write("&#8208;"+new Date().getFullYear());</script> {{ site.serverName }} &middot; About/Contact</a>
+    </div>
+
+    {% if page.navname == "Home" %}
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/serverstatus-home.js"></script>
+    {% else %}
+    <script type="text/javascript" src="{{ site.baseurl }}/assets/serverstatus.js"></script>
+    {% endif %}
+
+    <!-- Google Analytics -->
+    {% if googleAnalyticsID %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ googleAnalyticsID }}"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ googleAnalyticsID }}');
+    </script>
+    {% endif %}
+    
+    <div data-micromodal-trigger="dbutton" class="dbutton">
+        <button class="dbutton">Chat</button>
+        <div class="modal micromodal-slide" id="dbutton" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close style="padding:3%;">
+                <iframe src="https://titanembeds.com/embed/842779800694947840?defaultchannel=846311576725356615&fixedsidenav=true&noscroll=true&scrollbartheme=light-3&theme=FireWyvern" width="100%" height="100%" frameborder="0"></iframe>
+                <div class="absolute top-0 right-0">
+                    <button aria-label="Close modal" class="px-6 py-4 text-2xl text-gray-200" data-micromodal-close>&times;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/micromodal.custom.js"></script>
+
+</body>
+</html>
