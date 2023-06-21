@@ -38,11 +38,11 @@ layout: compress
 
 <body style="min-height:100vh;">
     <!-- navbar -->
-    <nav class="flex items-center justify-between flex-wrap bg-transparent p-6">
+    <nav class="flex items-center justify-between flex-wrap bg-transparent p-6 rounded-b-xl bg-pink-800 bg-opacity-30">
         <a href="{{ site.baseurl }}/">
             <div class="flex items-center flex-shrink-0 text-white mr-6 select-none">
-                <img src="{{ site.baseurl }}{{ site.siteIcon }}" class="mr-4 rounded shadow" width="30px" alt="{{ site.serverName }}">
-                <span class="font-semibold text-xl tracking-tight hidden md:block" id="serverLogoName">{{ site.serverName }}</span>
+                <img src="{{ site.baseurl }}{{ site.siteIcon }}" class="mr-4 rounded shadow" width="30px" alt="projectTitin Material Repository">
+                <span class="font-semibold text-xl tracking-tight hidden md:block" id="serverLogoName">projectTitin</span>
                 {% if site.siteNav %}
                     <div class="text-transparent select-none px-0 md:px-4 pb-1">
                         <div id="serverInd">&#11044;</div>
@@ -67,40 +67,15 @@ layout: compress
             {% endif %}
 
         </div>
-        
-        <!-- show status if no siteNav -->
-        {% if site.siteNav %}{% else %}
-        <div id="serverStatus" class="text-gray-200 hidden md:block cursor-pointer"></div>
-        {% endif %}
-
-        {% if site.siteNav %}{% else %}
-        <!-- only show mobile status if no siteNav -->
-        <div class="block md:hidden">
-            <div id="serverStatusM" class="text-gray-200 py-2 md:py-4"></div>
-        </div>
-
-        <!-- show loading for status API only if javascript is enabled -->
-        <script>
-            document.getElementById("serverStatus").innerHTML = "Loading...";
-            document.getElementById("serverStatusM").innerHTML = "Loading...";
-        </script>
-        {% endif %}
 
     </nav>
 
     {{ content }}
 
-    <div class="layoutfooter w-full pb-8 text-center transition duration-200">
-        <!-- Image in background is not actual gameplay &middot; -->
-        <a href="https://github.com/coffeebank/moonrise" rel="noopener" title="Moonrise by coffeebank" class="hover:text-gray-400">Template made with ❤️ by michael momochi ☕</a> &middot; 
-        <a href="{% if site.siteFooterlink %}{{ site.baseurl }}{{ site.siteFooterlink }}{% else %}{{ site.baseurl }}/about{% endif %}" rel="noopener" title="Legal" class="hover:text-gray-400">&copy; {{ site.siteYear }}<script>new Date().getFullYear()>{{ site.siteYear }}&&document.write("&#8208;"+new Date().getFullYear());</script> {{ site.serverName }} &middot; About/Contact</a>
+    <div class="bg-black bg-opacity-50 rounded-t-xl layoutfooter w-full p-5 text-center transition duration-200">
+        <a href="https://github.com/coffeebank/" rel="noopener" title="coffeebank on GitHub" class="hover:text-gray-400">Thanks to @mmmv on Discord for help on the site!</a> &middot; 
+        <a href="https://youtube.com/@pseudoforceyt" rel="noopener" title="Legal" class="hover:text-gray-400">&copy; {{ site.siteYear }}<script>new Date().getFullYear()>{{ site.siteYear }}&&document.write("&#8208;"+new Date().getFullYear());</script> youtube.com/@pseudoforceyt &middot; About/Contact</a>
     </div>
-
-    {% if page.navname == "Home" %}
-    <script type="text/javascript" src="{{ site.baseurl }}/assets/serverstatus-home.js"></script>
-    {% else %}
-    <script type="text/javascript" src="{{ site.baseurl }}/assets/serverstatus.js"></script>
-    {% endif %}
 
     <!-- Google Analytics -->
     {% if googleAnalyticsID %}
@@ -114,18 +89,6 @@ layout: compress
     gtag('config', '{{ googleAnalyticsID }}');
     </script>
     {% endif %}
-    
-    <div data-micromodal-trigger="dbutton" class="dbutton">
-        <button class="dbutton">Chat</button>
-        <div class="modal micromodal-slide" id="dbutton" aria-hidden="true">
-            <div class="modal__overlay" tabindex="-1" data-micromodal-close style="padding:3%;">
-                <iframe src="https://titanembeds.com/embed/842779800694947840?defaultchannel=846311576725356615&fixedsidenav=true&noscroll=true&scrollbartheme=light-3&theme=FireWyvern" width="100%" height="100%" frameborder="0"></iframe>
-                <div class="absolute top-0 right-0">
-                    <button aria-label="Close modal" class="px-6 py-4 text-2xl text-gray-200" data-micromodal-close>&times;</button>
-                </div>
-            </div>
-        </div>
-    </div>
     
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script src="{{ site.baseurl }}/assets/micromodal.custom.js"></script>
