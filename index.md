@@ -2,24 +2,21 @@
 layout: home
 navname: Home
 
-tabTitle: 'The Pseudo Force SMP'
-ogTitle: 'The Pseudo Force SMP'
-ogDesc: 'A fun cross-platform Survival Multiplayer server aiming to bring the Java and Bedrock community together!'
-ogImg: https://github.com/pseudoforceyt/smp/blob/master/docs/media/android-chrome-512x512.png?raw=true
+tabTitle: 'projectTitin'
+ogTitle: 'projectTitin Material Repository'
+ogDesc: 'A website aiming to provide simple notes for JEE prep and CBSE 12th Board prep'
+ogImg: https://upload.wikimedia.org/wikipedia/commons/2/27/1BPV.png
 ogURL: 
 
 # Cells at the bottom of the page
 cellLinks:
-  - cname: Map
-    curl: map
+  - cname: Notes
+    curl: catalog
     cimage: media/map.jpg
-  - cname: Screenshots
-    curl: screenshots
+  - cname: Blog
+    curl: blog
     cimage: media/screenshots.jpg
-  - cname: Hosting Helpers Shop
+  - cname: Other Socials
     curl: hostinghelp
     cimage: media/helpus.jpg
-  - cname: Guide
-    curl: https://guide.pseudosmp.com
-    cimage: media/guide.jpg
 ---
