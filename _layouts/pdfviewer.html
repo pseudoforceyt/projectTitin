@@ -9,7 +9,7 @@ layout: default
 		var adobeDCView = new AdobeDC.View({clientId: "$PDF_EMBED_API_KEY", divId: "adobe-dc-view"});
 		adobeDCView.previewFile({
 			content:{location: {url: "{{ page.pdflink }}"}},
-			metaData:{fileName: "{{ page.pdfname}}"}
+			metaData:{fileName: "{{ page.pdfname }}"}
 		}, {});
 	});
 </script>
