@@ -38,16 +38,11 @@ layout: compress
 
 <body style="min-height:100vh;">
     <!-- navbar -->
-    <nav class="flex items-center justify-between flex-wrap bg-transparent p-6 rounded-b-xl bg-pink-800 bg-opacity-30">
+    <nav class="flex items-center justify-between flex-wrap bg-transparent p-4 bg-opacity-30">
         <a href="{{ site.baseurl }}/">
             <div class="flex items-center flex-shrink-0 text-white mr-6 select-none">
-                <img src="{{ site.baseurl }}{{ site.siteIcon }}" class="mr-4 rounded shadow" width="30px" alt="projectTitin Material Repository">
+                <!-- img src="{{ site.baseurl }}{{ site.siteIcon }}" class="mr-4 rounded shadow" width="30px" alt="projectTitin Material Repository" -->
                 <span class="font-semibold text-xl tracking-tight hidden md:block" id="serverLogoName">projectTitin</span>
-                {% if site.siteNav %}
-                    <div class="text-transparent select-none px-0 md:px-4 pb-1">
-                        <div id="serverInd">&#11044;</div>
-                    </div>
-                {% endif %}
             </div>
         </a>
         <div class="block flex-grow flex items-center w-auto">
@@ -55,11 +50,11 @@ layout: compress
             {% if site.siteNav %}
                 <div class="text-base flex-grow text-right pb-1 lg:pb-0">
                     <!-- Home link only on lg -->
-                    <a href="{{ site.baseurl }}/" rel="noopener" class="hidden lg:block lg:inline-block {% if page.navname == "Home" %}text-white{% else %}text-teal-200 hover:text-white{% endif %} mr-4">
+                    <a href="{{ site.baseurl }}/" rel="noopener" class="hidden lg:block lg:inline-block {% if page.navname == "Home" %}text-white{% else %}text-teal-200 hover:text-white{% endif %} ml-4">
                         Home
                     </a>
                     {% for nlink in site.siteNav %}
-                        <a href="{{ site.baseurl }}/{{ nlink.url }}" rel="noopener" {% if nlink.newtab == true %}target="_blank" {% endif %}class="block inline-block {% if page.navname == nlink.name %}text-white{% else %}text-teal-200 hover:text-white{% endif %} mr-4">
+                        <a href="{{ site.baseurl }}/{{ nlink.url }}" rel="noopener" {% if nlink.newtab == true %}target="_blank" {% endif %}class="block inline-block {% if page.navname == nlink.name %}text-white{% else %}text-teal-200 hover:text-white{% endif %} ml-3">
                             {{ nlink.name }}
                         </a>
                     {% endfor %}
@@ -72,8 +67,8 @@ layout: compress
 
     {{ content }}
 
-    <div class="bg-black bg-opacity-50 rounded-t-xl layoutfooter w-full p-5 text-center transition duration-200">
-        <a href="https://github.com/coffeebank/" rel="noopener" title="coffeebank on GitHub" class="hover:text-gray-400">Thanks to coffeebank for help on this site</a> &middot; 
+    <div class="bg-black bg-opacity-50 rounded-t-xl layoutfooter w-full p-3 text-center transition duration-200">
+        <a href="https://github.com/coffeebank/" rel="noopener" title="coffeebank on GitHub" class="hover:text-gray-400">&middot; Thanks to coffeebank for help on this site</a> &middot; 
         <a href="https://youtube.com/@pseudoforceyt" rel="noopener" title="Legal" class="hover:text-gray-400">&copy; {{ site.siteYear }}<script>new Date().getFullYear()>{{ site.siteYear }}&&document.write("&#8208;"+new Date().getFullYear());</script> youtube.com/@pseudoforceyt &middot;</a>
     </div>
 

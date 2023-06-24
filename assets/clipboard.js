@@ -1,5 +1,5 @@
-new ClipboardJS('p#GCR');
-var clipboard = new ClipboardJS('p#GCR');
+new ClipboardJS('span#GCR');
+var clipboard = new ClipboardJS('span#GCR');
 var getsnack = document.getElementById("snackbar");
 
 clipboard.on('success', function(e) {
