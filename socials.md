@@ -1,4 +1,4 @@
 ---
 layout: redirect
-tourl: https://crystalwheels-my.sharepoint.com/:f:/g/personal/a7890_365proplus_lat/ErOsdQwhOwlOgNyKRXpqp6UBbJSbE8J7XSXjYA_Ri5x3yA?e=yWom1k
+tourl: https://drive.google.com/drive/folders/1I-j1EvmNeMBnZkX3Ww9VK6zCpwp0Lofr?usp=share_link
 ---
