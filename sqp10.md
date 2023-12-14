@@ -10,25 +10,25 @@ ogURL: sqp10
 
 cellLinks:
   - cname: Mathematics Basic
-    curl: https://cbse.solutions/mathsbasic
+    curl: https://link.nodia.uk/fullsp/SQP%2030%20Sets%20Maths%20Basics.pdf
     cnewtab: true
   - cname: Mathematics Standard
-    curl: https://cbse.solutions/mathsstd
+    curl: https://link.nodia.uk/fullsp/SQP%2030%20Sets%20Maths%20STD.pdf
     cnewtab: true
   - cname: Science
-    curl: https://cbse.solutions/science
+    curl: https://link.nodia.uk/fullsp/SQP%2030%20Sets%20Science.pdf
     cnewtab: true
   - cname: Social Studies
-    curl: https://cbse.solutions/social
+    curl: https://link.nodia.uk/fullsp/SQP%2030%20Sets%20Social%20Science.pdf
     cnewtab: true
   - cname: English Language and Literature
-    curl: https://cbse.solutions/englishll
+    curl: https://link.nodia.uk/fullsp/SQP%2030%20Sets%20English%20LL.pdf
     cnewtab: true
   - cname: Hindi A
-    curl: https://cbse.solutions/hindia
+    curl: https://link.nodia.uk/fullsp/SQP%2030%20Sets%20Hindi%20A.pdf
     cnewtab: true
   - cname: Hindi B
-    curl: https://cbse.solutions/hindib
+    curl: https://link.nodia.uk/fullsp/SQP%2030%20Sets%20Hindi%20B.pdf
     cnewtab: true
 ---
 
