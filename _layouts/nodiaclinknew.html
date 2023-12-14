@@ -16,29 +16,29 @@ layout: default
                 </div>
                 <div class="px-4 py-2 w-full h-full bottom-0 bg-transparent cursor-default pointer-events-none absolute z-10">
                     <div class="absolute" style="top:50%;left:50%;transform:translate(-50%, -50%);">
-                        <div data-micromodal-trigger="dbutton">
-                            <button class="dbutton w-auto bg-gray-800 visited:bg-gray-600 text-gray-300 hover:text-gray py-3 px-6 text-lg rounded">
+                        <div data-micromodal-trigger="{{ clink.cid }}">
+                            <button class="w-auto bg-gray-800 visited:bg-gray-600 text-gray-300 hover:text-gray py-3 px-6 text-lg rounded">
                                 <span>{{ clink.cname }}</span>
                             </button>
-                            <div class="modal micromodal-slide" id="dbutton" aria-hidden="true">
-                                <div class="modal__overlay" tabindex="-1" data-micromodal-close style="padding:3%;">
-                                    <div id="adobe-dc-view"></div>
-                                    <script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
-                                    <script type="text/javascript">
-                                        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-                                            var adobeDCView = new AdobeDC.View({clientId: "45e5b52e8d5f41f98cc2e0db3e59362a", divId: "adobe-dc-view"});
-                                            adobeDCView.previewFile({
-                                                content:{location: {url: "{{ clink.curl }}"}},
-                                                metaData:{fileName: "{{ clink.cname }}"}
-                                            }, {});
-                                        });
-                                    </script>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="modal micromodal-slide" id="{{ clink.cid }}" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close style="padding:3%;">
+            <div id="adobe-dc-view"></div>
+            <script src="https://documentservices.adobe.com/view-sdk/viewer.js"></script>
+            <script type="text/javascript">
+                document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+                    var adobeDCView = new AdobeDC.View({clientId: "45e5b52e8d5f41f98cc2e0db3e59362a", divId: "adobe-dc-view"});
+                    adobeDCView.previewFile({
+                        content:{location: {url: "{{ clink.curl }}"}},
+                        metaData:{fileName: "{{ clink.cname }}"}
+                    }, {});
+                });
+            </script>
+        </div>
+    </div>
     {% endfor %}
 </div>
