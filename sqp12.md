@@ -3,7 +3,7 @@ layout: nodiaclink
 navname: sqp12
 
 tabTitle: 'Class XII Nodia SQP'
-ogTitle: 'Nodia Solved Sample Papers link for Class XII'
+ogTitle: 'Class XII Nodia Solved Sample Papers'
 ogDesc: '20+ Sample papers per subject, each with solutions for the questions attached at the end'
 ogImg: https://play-lh.googleusercontent.com/Vm8QmEmnoXVnj7KZgBpP7Dz3Cqv_9jKaHplFdP4x6QdhQqmq-uj_CeFIgYyLr42R2f8
 ogURL: sqp12
