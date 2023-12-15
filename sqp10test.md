@@ -10,24 +10,31 @@ ogURL: sqp10
 
 cellLinks:
   - cname: Mathematics Basic
+    cid: mbasic
     curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2030%20Sets%20Maths%20Basics.pdf
     cnewtab: true
   - cname: Mathematics Standard
+    cid: mstd
     curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2030%20Sets%20Maths%20STD.pdf
     cnewtab: true
   - cname: Science
+    cid: sci
     curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2030%20Sets%20Science.pdf
     cnewtab: true
   - cname: Social Studies
+    cid: social
     curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2030%20Sets%20Social%20Science.pdf
     cnewtab: true
   - cname: English Language and Literature
+    cid: engll
     curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2030%20Sets%20English%20LL.pdf
     cnewtab: true
   - cname: Hindi A
+    cid: hindia
     curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2030%20Sets%20Hindi%20A.pdf
     cnewtab: true
   - cname: Hindi B
+    cid: hindib
     curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2030%20Sets%20Hindi%20B.pdf
     cnewtab: true
 ---
