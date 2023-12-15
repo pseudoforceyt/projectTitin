@@ -10,16 +10,16 @@ ogURL: sqp12
 
 cellLinks:
   - cname: Mathematics (041)
-    curl: https://link.nodia.uk/fullsp/SQP%2020%20Sets%20Mathematics.pdf
+    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Mathematics.pdf
     cnewtab: true
   - cname: Physics (042)
-    curl: https://link.nodia.uk/fullsp/SQP%2020%20Sets%20Physics.pdf
+    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Physics.pdf
     cnewtab: true
   - cname: Chemistry (043)
-    curl: https://link.nodia.uk/fullsp/SQP%2020%20Sets%20Chemistry.pdf
+    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Chemistry.pdf
     cnewtab: true
   - cname: English Core (301)
-    curl: https://link.nodia.uk/fullsp/SQP%2020%20Sets%20English%20core.pdf
+    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20English%20core.pdf
     cnewtab: true
   - cname: Computer Science (083)
     curl: https://cbse.solutions/computerscience
@@ -28,22 +28,22 @@ cellLinks:
     curl: https://cbse.solutions/infopractice
     cnewtab: true
   - cname: Physical Education
-    curl: https://link.nodia.uk/fullsp/SQP%2020%20Sets%20%20Physical%20education.pdf
+    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20%20Physical%20education.pdf
     cnewtab: true
   - cname: Biology
-    curl: https://link.nodia.uk/fullsp/SQP%2020%20Sets%20Biology.pdf
+    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Biology.pdf
     cnewtab: true
   - cname: History
-    curl: https://link.nodia.uk/fullsp/SQP%2020%20Sets%20History.pdf
+    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20History.pdf
     cnewtab: true
   - cname: Geography
-    curl: https://link.nodia.uk/fullsp/SQP%2020%20Sets%20Geography.pdf
+    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Geography.pdf
     cnewtab: true
   - cname: Political Science
-    curl: https://link.nodia.uk/fullsp/SQP%2020%20Sets%20Political%20science.pdf
+    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Political%20science.pdf
     cnewtab: true
   - cname: Economics
-    curl: https://link.nodia.uk/fullsp/SQP%2020%20Sets%20Economics.pdf
+    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Economics.pdf
     cnewtab: true
   - cname: Sociology
     curl: https://cbse.solutions/sociology
@@ -52,14 +52,14 @@ cellLinks:
     curl: https://cbse.solutions/psychology
     cnewtab: true
   - cname: Business Studies
-    curl: https://link.nodia.uk/fullsp/SQP%2020%20Sets%20Business%20studies.pdf
+    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Business%20studies.pdf
     cnewtab: true
   - cname: Accountancy
-    curl: https://link.nodia.uk/fullsp/SQP%2020%20Sets%20Accountancy.pdf
+    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Accountancy.pdf
     cnewtab: true
 ---
 
-# Solved SQPs For Class XII
+### Solved SQPs For Class XII
+Some papers may be missing, those havent been uploaded by the original site owners of cbse.solutions yet
 
-## Some papers may be missing, those havent been uploaded by the original site owners of cbse.solutions yet
-### This site is in no way related or affiliated to Nodia Learning Pvt. Ltd.,
+**This site is in no way related or affiliated to Nodia Learning Pvt. Ltd.,**
