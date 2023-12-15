@@ -10,16 +10,16 @@ ogURL: sqp12
 
 cellLinks:
   - cname: Mathematics (041)
-    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Mathematics.pdf
+    curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Mathematics.pdf
     cnewtab: true
   - cname: Physics (042)
-    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Physics.pdf
+    curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Physics.pdf
     cnewtab: true
   - cname: Chemistry (043)
-    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Chemistry.pdf
+    curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Chemistry.pdf
     cnewtab: true
   - cname: English Core (301)
-    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20English%20core.pdf
+    curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2020%20Sets%20English%20core.pdf
     cnewtab: true
   - cname: Computer Science (083)
     curl: https://cbse.solutions/computerscience
@@ -28,22 +28,22 @@ cellLinks:
     curl: https://cbse.solutions/infopractice
     cnewtab: true
   - cname: Physical Education
-    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20%20Physical%20education.pdf
+    curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2020%20Sets%20%20Physical%20education.pdf
     cnewtab: true
   - cname: Biology
-    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Biology.pdf
+    curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Biology.pdf
     cnewtab: true
   - cname: History
-    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20History.pdf
+    curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2020%20Sets%20History.pdf
     cnewtab: true
   - cname: Geography
-    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Geography.pdf
+    curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Geography.pdf
     cnewtab: true
   - cname: Political Science
-    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Political%20science.pdf
+    curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Political%20science.pdf
     cnewtab: true
   - cname: Economics
-    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Economics.pdf
+    curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Economics.pdf
     cnewtab: true
   - cname: Sociology
     curl: https://cbse.solutions/sociology
@@ -52,10 +52,10 @@ cellLinks:
     curl: https://cbse.solutions/psychology
     cnewtab: true
   - cname: Business Studies
-    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Business%20studies.pdf
+    curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Business%20studies.pdf
     cnewtab: true
   - cname: Accountancy
-    curl: https://github.com/pseudoforceyt/projectTitin/blob/main/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Accountancy.pdf
+    curl: https://pseudoforceyt.github.io/projectTitin/rawpdf/CBSE/nodia/SQP%2020%20Sets%20Accountancy.pdf
     cnewtab: true
 ---
 
