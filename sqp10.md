@@ -34,4 +34,5 @@ cellLinks:
 
 ### Solved SQPs For Class X
 Some papers may be missing, those havent been uploaded by the original site owners of cbse.solutions yet
+
 **This site is in no way related or affiliated to Nodia Learning Pvt. Ltd.,**
