@@ -10,13 +10,8 @@ ogURL:
 
 # Cells at the bottom of the page
 cellLinks:
-  - cname: Notes
-    curl: catalog
-    cimage: media/map.jpg
-  - cname: Blog
-    curl: blog
-    cimage: media/screenshots.jpg
-  - cname: Other Socials
-    curl: hostinghelp
-    cimage: media/helpus.jpg
+  - cname: Useful Resources
+    curl: useful
+  - cname: YouTube
+    curl: socials
 ---
