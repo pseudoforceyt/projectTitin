@@ -2,7 +2,7 @@ repository: pseudoforceyt/projectTitin
 url: "https://pseudoforceyt.github.io"
 baseurl: "/projectTitin"
 siteIcon: /media/android-chrome-192x192.png
-siteYear: 2023
+siteYear: 2024
 siteFooterlink: /about
 showinSearchEngines: true
 # googleAnalyticsID: 
@@ -11,9 +11,9 @@ siteNav:
    - name: About
      url: about
      newtab: true
-   - name: 'Notes Catalog'
-     url: catalog
-   - name: 'Other Socials'
+   - name: 'Useful Resources'
+     url: useful
+   - name: 'YouTube'
      url: socials
 
 theme: minima
