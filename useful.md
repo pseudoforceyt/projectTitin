@@ -16,4 +16,6 @@ cellLinks:
     curl: https://pseudoforceyt.github.io/projectTitin/12a10archive
   - cname: Collection of Question Papers (XII)
     curl: https://pseudoforceyt.github.io/projectTitin/qpcollection
+  - cname: Nodia Class XII Sample papers for all subjects
+    curl: https://pseudoforceyt.github.io/projectTitin/sqp12
 ---
