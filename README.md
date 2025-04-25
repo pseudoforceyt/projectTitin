@@ -1,1 +1,1 @@
-Physics Chemistry and Mathematics notes for JEE
+Website for public access to academic resources from my side
