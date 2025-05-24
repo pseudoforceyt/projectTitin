@@ -137,3 +137,46 @@ pre {
         background-color: var(--button-bg-light);
     }
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: var(--text-rounded);
+    overflow: hidden;
+    margin-bottom: var(--text-mb);
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+th {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+td {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.75rem 1rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    td {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+}
