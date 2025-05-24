@@ -18,7 +18,7 @@ The stage is where all the microphones, stage monitors, most of the effects ligh
 Truss is a structural framework that is used to distribute forces and provide strength to the structure. In stage work, trusses are what hold up the effects lighting, lasers, PAR cans, moving head lights, blinders, etc., and some Public Address (PA) line array speakers.
 
 <div style="text-align: center; max-width: 100%; margin: 1em 0;">
-  <img src="box truss.jpg" alt="Aluminium Box Truss" style="max-width: 20vw; max-height: 50vw; height: auto; display: block; margin: 0 auto;">
+  <img src="box_truss.png" alt="Aluminium Box Truss" style="max-width: 20vw; max-height: 50vw; height: auto; display: block; margin: 0 auto;">
   <div style="margin-top: 0.5em; font-style: italic;">Aluminium Box Truss</div>
 </div>
 
