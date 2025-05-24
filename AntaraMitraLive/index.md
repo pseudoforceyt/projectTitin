@@ -44,7 +44,7 @@ The matrix output in a mixer allows for creating a custom mix of the existing ou
 Cardioid pattern is a heart-like shape within which the sound input is picked up/sound output is heard. A cardioid looks like this:
 
 <div style="text-align: center; max-width: 100%; margin: 1em 0;">
-  <img src="image-1.png" alt="Cardioid Polar Pattern" style="max-width: 40% height: auto; display: block; margin: 0 auto;">
+  <img src="image-1.png" alt="Cardioid Polar Pattern" style="max-width: 60% height: auto; display: block; margin: 0 auto;">
   <div style="margin-top: 0.5em; font-style: italic;">Cardioid Polar Pattern</div>
 </div>
 
@@ -88,16 +88,16 @@ Both of these cards use ethernet as their interface to the DSP server.
 
 - **Side Fills:** These are speakers which are placed on the sides of the stage facing inward, to propagate sound to performers in case of large stages where just the wedges would not be enough. Side fills output a more general mix where all performers can hear the essential parts of the main mix.
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; justify-items: center; margin: 2rem 0; font-size: 0.8rem">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; justify-items: center; margin: 2rem 0;">
 
-  <div style="width: 100%; max-width: 50%;">
+  <div style="width: 100%; max-width: 70%;">
     <img src="image-35.png" alt="JBL SRX835" style="width: 100%; border-radius: 0.65rem;">
-    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">JBL SRX835 (Side Fill)</div>
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc; font-style: italic;">JBL SRX835 (Side Fill)</div>
   </div>
 
-  <div style="width: 100%; max-width: 50%;">
+  <div style="width: 100%; max-width: 70%;">
     <img src="image-36.png" alt="JBL SRX828S" style="width: 100%; border-radius: 0.65rem;">
-    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">JBL SRX828S (Side fill Subwoofer)</div>
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc; font-style: italic;">JBL SRX828S (Side fill Subwoofer)</div>
   </div>
 
 </div>
@@ -263,72 +263,72 @@ We've already seen about all the outputs in the previous sections.
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; justify-items: center; margin: 2rem 0; font-size: 0.8rem">
   
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-4.png" alt="Sharpy (not sharpie, thats a marker!)" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Sharpy (not sharpie, thats a marker!)</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-5.png" alt="Moving-Head Wash" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Moving-Head Wash</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-6.png" alt="LED PAR" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">LED PAR</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-7.png" alt="Warm PAR" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Warm PAR</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-8.png" alt="Profile Spotlight" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Profile Spotlight</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-9.png" alt="RGB Strobe Light" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">RGB Strobe Light</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-10.png" alt="4-way Molefay Blinder" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">4-way Molefay Blinder</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-11.png" alt="2-way Molefay Blinder" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">2-way Molefay Blinder</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-12.png" alt="Haze Machine" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Haze Machine</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-13.png" alt="Fog (Smoke) Machine" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Fog (Smoke) Machine</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-14.png" alt="RGB LED Batten" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">RGB LED Batten</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-15.png" alt="Follow Spot" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Follow Spot</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-16.png" alt="Avolite Arena" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Avolite Arena</div>
   </div>
 
-  <div style="width: 100%; max-width: 40%;">
+  <div style="width: 100%; max-width: 60%;">
     <img src="image-17.png" alt="Avolite Tiger Touch II" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Avolite Tiger Touch II</div>
   </div>
