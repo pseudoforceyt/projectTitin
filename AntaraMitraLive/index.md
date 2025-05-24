@@ -44,7 +44,7 @@ The matrix output in a mixer allows for creating a custom mix of the existing ou
 Cardioid pattern is a heart-like shape within which the sound input is picked up/sound output is heard. A cardioid looks like this:
 
 <div style="text-align: center; max-width: 100%; margin: 1em 0;">
-  <img src="image-1.png" alt="Cardioid Polar Pattern" style="max-width: 60% height: auto; display: block; margin: 0 auto;">
+  <img src="image-1.png" alt="Cardioid Polar Pattern" style="max-width: 35% height: auto; display: block; margin: 0 auto;">
   <div style="margin-top: 0.5em; font-style: italic;">Cardioid Polar Pattern</div>
 </div>
 
