@@ -9,7 +9,7 @@ A technical rider is a document that lists the technical requirements and setup 
 
 ## Stage
 
-Stage is the platform where the performers ✨ perform ✨
+Stage is the platform where the performers perform. It is a platform that is raised sufficiently above the audience's level for maximum visibility.
 
 The stage is where all the microphones, stage monitors, most of the effects lighting, and instruments are placed.
 
@@ -17,7 +17,10 @@ The stage is where all the microphones, stage monitors, most of the effects ligh
 
 Truss is a structural framework that is used to distribute forces and provide strength to the structure. In stage work, trusses are what hold up the effects lighting, lasers, PAR cans, moving head lights, blinders, etc., and some Public Address (PA) line array speakers.
 
-![Aluminium Box Truss](<box truss.jpg>)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="box truss.jpg" alt="Aluminium Box Truss" style="max-width: 20vw; max-height: 50vw; height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Aluminium Box Truss</div>
+</div>
 
 # Audio Tech Requirements
 
@@ -28,14 +31,22 @@ Public Address (PA) System is a system of speakers, amplifiers, mixers and signa
 SPL means Sound Pressure Level, which is the measurement of how loud the sound is in decibels (logarithmic scale of power). Having a speaker capable of delivering 120dB SPL (which is enough to cause hearing loss at prolonged exposure) at the console position ensures that there is enough headroom for working with clean audio at high volumes. It does not mean that the speaker will be operated at its maximum capability the whole time; it ensures that the speaker is surely loud enough to reach the back of the crowd. As it is not operated at its limits all the time, it also helps with reducing the problem of overheating or mechanical wear and tear of the speaker.
 
 A Line Array speaker is a system of multiple identical speakers arranged in a stack or a vertical line. The advantage of doing this is to combine all the sound waves in a controlled beam which can cover a larger distance, which reduces the overall loss in level with distance due to the summation of signals from the array of speakers.
-![Line Array (L Acoustics)](image.png)
+
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image.png" alt="Line Array (L Acoustics)" style="max-width: 60%; height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Line Array (L Acoustics)</div>
+</div>
 
 Stereo uses two channels of sound (left and right) to make the sound feel more spatial or more natural. This improves the immersion of the experience. 4-way refers to the number of frequency bands which have their own driver to produce the sound of that frequency band (sub, low, mid, and high). This covers the "Full Range", and by splitting the work between 4 drivers, it can produce higher quality audio with lower distortion at increased loudness (SPL).
 
 The matrix output in a mixer allows for creating a custom mix of the existing output (like the main L/R mix, auxiliaries, and groups). Matrix mixes give control over EQ, delay, compression etc., and for instance, can be used to boost the vocals alone (in case of the centre fill). Auxiliary send outputs allows creation of independent mixes for different purposes such as monitors, recordings, effects (FX) processing, and in this case, subs.
 
 Cardioid pattern is a heart-like shape within which the sound input is picked up/sound output is heard. A cardioid looks like this:
-![Cardioid Polar Pattern](image-1.png)
+
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-1.png" alt="Cardioid Polar Pattern" style="max-width: 40% height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Cardioid Polar Pattern</div>
+</div>
 
 This pattern is preferred because the PA system does specifically that: address the **audience**. This sound isn't needed for the stage and should not interfere with the input sources causing a feedback loop. This pattern ensures the sound clearly reaches the audience, and only the audience. It avoids distrubing the stage or the neighbouring areas with loud sound. Achieving a cardioid output pattern with a subwoofer is a difficult task, involving multiple subwoofers, and clever polarity and delay manipulation. This is because lower frequency sounds are more omnidirectional. Higher end subwoofers (like the ones listed in the techrider) achieve this with a single enclosure.
 
@@ -88,14 +99,21 @@ Both of these cards use ethernet as their interface to the DSP server.
 
 - **Shout Monitor:** This is a monitor for the FOH which is used solely for communication between the stage crew and the FOH. This outputs a mix of all talkbalk mics. There is no preferred product mentioned in the techrider but after some searching I think any good small speaker would do? Some people recommend compact PA systems like this 
 
-![Mackie SRM150](image-2.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-2.png" alt="Mackie SRM150" style="max-width: 50% height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Mackie SRM150</div>
+</div>
 
 Thinking of which, they requested 6 wedges at the start of the document but in the output routing only 4 are shown to be hooked up, maybe one of the wedges are being used as a shout monitor?
 
 ## Backline Requirements (Combined with Output and Input routing because i want to correlate the two)
 
 ### Drum
-![Drums!](image-3.png)
+
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-3.png" alt="Drum kit" style="max-width: 60% height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Drum Kit</div>
+</div>
 
 These many many parts of a drum kit each make various sounds which make up the base of the track, the pulse, the beat. It also ranges from very low frequency (bass) to higher frequencies (crash cymbals) covering a vast range of the audible spectrum. O rings (mentioned as mandatory) help sustain the sound; reduce ringing and overtones, dampen, control, and make it sound more fuller or "fatter".
 
@@ -149,35 +167,59 @@ Hartke HD 410 - Cabinet
 
 - The Shure Beta 91A has a half cardioid pickup polar pattern while the 52A has a supercardioid pickup. The 91A's frequency response range is 20Hz to 20kHz whereas the 52A only has 20Hz - 10kHz. Both of these microphones are tuned with frequency response curves suitable for kick drums
 
-![Shure Beta 52A (Left) and 91A (Right)](image-27.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-27.png" alt="Shure Beta 52A (Left) and 91A (Right)" style="max-width: 60% height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Shure Beta 52A (Left) and 91A (Right)</div>
+</div>
 
 - Both the Shure SM57 and the Sennheiser e604 are dynamic microphones have a cardioid polar pattern. They have 40Hz-15000kHz and 40Hz-18000kHz response range respectively. Both are marketed towards recording percussion instruments (like drums), and Sennheiser explicitly mentions use with snares. The perference for snare bottom being Shure may be one gained through experience.
 
-![Shure SM57 (Left) and Sennheiser e904 (Right)](image-28.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-28.png" alt="Shure SM57 (Left) and Sennheiser e904 (Right)" style="max-width: 60% height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Shure SM57 (Left) and Sennheiser e904 (Right)</div>
+</div>
 
 - The Sennheiser e914 and Shure SM81 are both condenser microphones with 20Hz to 20kHz frequency range and have a cardioid polar pattern. Both have very similar response curves but the e914 is slightly elevated around the high end.
 
-![Shure SM81 (L) and Sennheiser e914 (R)](image-29.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-29.png" alt="Shure SM81 (L) and Sennheiser e914 (R)" style="max-height: 30vw; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Shure SM81 (L) and Sennheiser e914 (R)</div>
+</div>
 
 - The Shure SM58 is another cardioid dynamic microphone. Its frequency response seems to be tuned for vocals, so it is a suitable and economic (according to a [reddit post](https://www.reddit.com/r/livesound/comments/uvbp35/other_than_the_sm58_and_sm57_what_mics_wired_or/)) choice for vox and talkback channels. It seems like there is a variant called SM58S that has an integrated on/off switch as well [mentioned as "SM58 (SWITCH)" in the techrider].
 
-![Shure SM58](image-33.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-33.png" alt="Shure SM58" style="max-height: 30vw; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Shure SM58</div>
+</div>
 
 - Hohohoho the Sennheiser SKM 6000 sure does have all the bells and whistles (signal encryption on a mic??) It's a dynamic wireless microphone that has a capsule interface to change microphone heads, changing the mic's polar pattern, frequency response curve and sensitivity, takes power in the form of swappable lithium-ion battery packs and more. It seems to be a premium option
 
-![Sennheiser SKM 6000](image-32.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-32.png" alt="Sennheiser SKM 6000" style="max-height: 30vw; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Sennheiser SKM 6000</div>
+</div>
 
 - There is also a Shure WBH53 mentioned, which is an omnidirectional condenser mic that can be worn on the head, possibly for hands-free segments and spoken parts
 
-![Shure WBH53](image-31.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-31.png" alt="Shure WBH53" style="max-width: 60% height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Shure WBH53</div>
+</div>
 
 - The Sennheiser MKH 416 is a shotgun microphone that is highly directional and records sound only coming from the front.
 
-![Sennheiser MKH 416](image-34.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-34.png" alt="Sennheiser MKH 416" style="max-width: 60% height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Sennheiser MKH 416</div>
+</div>
 
 - **Hotshot?** Hotshot is a microphone switcher which can be used to reroute the output channel of the microphone connect to it (apparently with no pops as advertised on their website.) This allows the performer to switch between performing for the PA to communicating with the crew (talkback) seamlessly. It also provides 48V phantom power to the mic.
 
-![Hotshot 48V](image-30.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-30.png" alt="Hotshot 48V" style="max-width: 50% height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Hotshot 48V</div>
+</div>
 
 We've already seen about all the outputs in the previous sections.
 
@@ -185,33 +227,79 @@ We've already seen about all the outputs in the previous sections.
 
 ###### here is a picture gallery
 
-![Sharpy (not sharpie, thats a marker!)](image-4.png)
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; justify-items: center; margin: 2rem 0;">
+  
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-4.png" alt="Sharpy (not sharpie, thats a marker!)" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Sharpy (not sharpie, thats a marker!)</div>
+  </div>
 
-![Moving-Head Wash](image-5.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-5.png" alt="Moving-Head Wash" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Moving-Head Wash</div>
+  </div>
 
-![LED PAR](image-6.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-6.png" alt="LED PAR" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">LED PAR</div>
+  </div>
 
-![Warm PAR](image-7.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-7.png" alt="Warm PAR" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Warm PAR</div>
+  </div>
 
-![Profile Spotlight](image-8.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-8.png" alt="Profile Spotlight" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Profile Spotlight</div>
+  </div>
 
-![RGB Strobe Light](image-9.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-9.png" alt="RGB Strobe Light" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">RGB Strobe Light</div>
+  </div>
 
-![4-way Molefay Blinder](image-10.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-10.png" alt="4-way Molefay Blinder" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">4-way Molefay Blinder</div>
+  </div>
 
-![2-way Molefay Blinder](image-11.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-11.png" alt="2-way Molefay Blinder" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">2-way Molefay Blinder</div>
+  </div>
 
-![Haze Machine](image-12.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-12.png" alt="Haze Machine" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Haze Machine</div>
+  </div>
 
-![Fog (Smoke) Machine](image-13.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-13.png" alt="Fog (Smoke) Machine" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Fog (Smoke) Machine</div>
+  </div>
 
-![RGB LED Batten](image-14.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-14.png" alt="RGB LED Batten" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">RGB LED Batten</div>
+  </div>
 
-![Follow Spot](image-15.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-15.png" alt="Follow Spot" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Follow Spot</div>
+  </div>
 
-![Avolite Arena](image-16.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-16.png" alt="Avolite Arena" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Avolite Arena</div>
+  </div>
 
-![Avolite Tiger Touch II](image-17.png)
+  <div style="width: 100%; max-width: 30%;">
+    <img src="image-17.png" alt="Avolite Tiger Touch II" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Avolite Tiger Touch II</div>
+  </div>
+
+</div>
 
 ![Antara Mitra Live 1](image-18.png)
 
@@ -232,7 +320,10 @@ It communicates with the lights over something called Digital Multiplex (DMX) wh
 
 - **Haze** is paired with lighting such as lasers to create spatial lighting effects like the one shown below. Though the haze itself is not that visible from distances, it stays airborne for a while, which is perfect for lighting effects. It uses oil-based fluids so care must be taken so that it does not deposit the oil on other equipments.
 
-![Lighting effects with Haze](image-21.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-21.png" alt="Lighting effects with Haze" style="max-height: 30vw; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Lighting effects with Haze</div>
+</div>
 
 - **Fog** (or Smoke) on the other hand, is made with vaporised/atomised water/glycol and used for quick smoke effects, as it stays airborne only for short durations.
 
@@ -246,13 +337,25 @@ It communicates with the lights over something called Digital Multiplex (DMX) wh
 
 - **Flamaniac**, **3/5 Finger Flames**, and **G Flames** all project fire in a straight line. **Sparkular** projects sparks, **Stage mines** explode into colorful sparks/flares on stage for visual and auditory effect, and **Stage Comets** launch streak-like fireworks upwards from the stage.
 
-![5-finger Flames](image-22.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-22.png" alt="5-finger Flames" style="display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">5-finger Flames</div>
+</div>
 
-![Galaxis G-Flame](image-23.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-23.png" alt="Galaxis G-Flame" style="display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Galaxis G-Flame</div>
+</div>
 
-![Flame Fingers and Comets](image-24.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-24.png" alt="Flame Fingers and Comets" style="display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Flame Fingers and Comets</div>
+</div>
 
-![Confetti and Ribbons](image-25.png)
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-25.png" alt="Confetti and Ribbons" style="display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Confetti and Ribbons</div>
+</div>
 
 The Avolites Pearl / GrandMA Dot 2 console at the SFX desk controls all this, also via DMX.
 
@@ -266,6 +369,8 @@ The Teleprompter is a screen for the vocalist to read lyrics and script for the 
 
 Camera input can be fed live into the displays for close-up views of the performers for the audience in the back.
 
-![Novastar 4K Prime](image-26.png)
-
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-26.png" alt="Novastar 4K Prime" style="max-width: 50% height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Novastar 4K Prime</div>
+</div>
 
