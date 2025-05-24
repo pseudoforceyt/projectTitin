@@ -327,12 +327,16 @@ We've already seen about all the outputs in the previous sections.
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Follow Spot</div>
   </div>
 
-  <div style="width: 100%; max-width: 60%;">
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; justify-items: center; margin: 2rem 0;">
+
+  <div style="width: 100%; max-width: 80%;">
     <img src="image-16.png" alt="Avolite Arena" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Avolite Arena</div>
   </div>
 
-  <div style="width: 100%; max-width: 60%;">
+  <div style="width: 100%; max-width: 80%;">
     <img src="image-17.png" alt="Avolite Tiger Touch II" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Avolite Tiger Touch II</div>
   </div>
