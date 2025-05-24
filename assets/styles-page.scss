@@ -29,6 +29,7 @@ p {
 
 a {
     color: var(--text-light);
+    text-decoration: underline;
     
     &:hover {
         color: var(--text-color);
