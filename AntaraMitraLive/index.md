@@ -408,3 +408,20 @@ Camera input can be fed live into the displays for close-up views of the perform
   <div style="margin-top: 0.5em; font-style: italic;">Novastar 4K Prime</div>
 </div>
 
+# Extending the techrider
+
+Well I don't know much in the audio and lighting effects space so I will extend it with what I do know:
+
+## Recording & Live Streaming
+
+### Cameras
+
+- Broadcast Cameras - 5 nos. (Blackmagic Studio Camera 4K Pro / Sony FX-7 / FX 6 / FS 7)
+- Wireless Video Transmitters at each camera (Hollyland Cosmo C2 Preferred)
+- 1x 16ft Camera Dolly
+- 1x 18ft Video Jib with Remote PTZ Head + Operator
+
+### Networking & Streaming
+
+- Stable internet connection (via Ethernet or Fiber) with minimum 20 Mbps uplink (If not available, LiveU or Peplink)
+- 1x Stream Encoding Computer (Hardware Accelerated) + Stream Operator
