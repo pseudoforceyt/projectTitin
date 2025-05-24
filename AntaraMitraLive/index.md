@@ -33,8 +33,8 @@ SPL means Sound Pressure Level, which is the measurement of how loud the sound i
 A Line Array speaker is a system of multiple identical speakers arranged in a stack or a vertical line. The advantage of doing this is to combine all the sound waves in a controlled beam which can cover a larger distance, which reduces the overall loss in level with distance due to the summation of signals from the array of speakers.
 
 <div style="text-align: center; max-width: 100%; margin: 1em 0;">
-  <img src="image.png" alt="Line Array (L Acoustics)" style="max-width: 60%; height: auto; display: block; margin: 0 auto;">
-  <div style="margin-top: 0.5em; font-style: italic;">Line Array (L Acoustics)</div>
+  <img src="image.jpg" alt="Line Array (L Acoustics)" style="max-height: 40vw; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Line Array (L Acoustics V-DOSC)</div>
 </div>
 
 Stereo uses two channels of sound (left and right) to make the sound feel more spatial or more natural. This improves the immersion of the experience. 4-way refers to the number of frequency bands which have their own driver to produce the sound of that frequency band (sub, low, mid, and high). This covers the "Full Range", and by splitting the work between 4 drivers, it can produce higher quality audio with lower distortion at increased loudness (SPL).
@@ -81,9 +81,33 @@ Both of these cards use ethernet as their interface to the DSP server.
 
 - **Wedge Monitors:** Shaped just like they are named, wedge monitors are wedge shaped floor monitors which are placed on the stage angled upward towards the performer. 
 
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image.png" alt="JBL VRX915M (Wedge Monitor)" style="max-width: 50%; height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">JBL VRX915M (Wedge Monitor)</div>
+</div>
+
 - **Side Fills:** These are speakers which are placed on the sides of the stage facing inward, to propagate sound to performers in case of large stages where just the wedges would not be enough. Side fills output a more general mix where all performers can hear the essential parts of the main mix.
 
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; justify-items: center; margin: 2rem 0; font-size: 0.8rem">
+
+  <div style="width: 100%; max-width: 50%;">
+    <img src="image-35.png" alt="JBL SRX835" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">JBL SRX835 (Side Fill)</div>
+  </div>
+
+  <div style="width: 100%; max-width: 50%;">
+    <img src="image-36.png" alt="JBL SRX828S" style="width: 100%; border-radius: 0.65rem;">
+    <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">JBL SRX828S (Side fill Subwoofer)</div>
+  </div>
+
+</div>
+
 - **Subwoofer for Drummer:** With the drums already being loud enough for the drummer to hear, the drummer needs the subwoofer to feel the kick and the bass physically. This is a low frequency monitor for drummers.
+
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-37.png" alt="JBL SRX818S" style="max-width: 50%; height: auto; display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">JBL SRX818S (Drummer Subwoofer)</div>
+</div>
 
 - When we have all these, why **IEMs**? In-Ear Monitors are monitors which can be worn by the performers in their ears. IEMs offer passive isolation of outside noises and gives a focused monitor output to the performers. The earpieces can be custom tailored for the performer's ear shape for better passive isolation. IEMs are also used for communication among the performers and the crew members (cueing) The reason why we have the stage monitors apart from IEMs is because
 
@@ -95,12 +119,22 @@ Both of these cards use ethernet as their interface to the DSP server.
 
     * IEMs don't give the *feel* of the bass, it doesn't have a physical impact on the rest of the body unlike stage monitors. This is important especially in case of drummers
 
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-38.png" alt="IEM 2000 Series Receive (L) and Transmitter (R)" style="display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Sennheiser IEM 2000 Series Receiver (left) and Transmitter (right). User's choice of IEM earphones could be plugged into the receiver.</div>
+</div>
+
 - **Combiner antenna** is used to group multiple transmitters into a single antenna transmitter. This helps in eliminating the interference and cluttering caused by multiple transmitters in close proximity with each other. This also improves the performance of transimitting and the signal reliability.
+
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <img src="image-39.png" alt="Sennheiser AC 3200-II 8-signal Antenna Combiner" style="display: block; margin: 0 auto;">
+  <div style="margin-top: 0.5em; font-style: italic;">Sennheiser AC 3200-II 8-signal Antenna Combiner</div>
+</div>
 
 - **Shout Monitor:** This is a monitor for the FOH which is used solely for communication between the stage crew and the FOH. This outputs a mix of all talkbalk mics. There is no preferred product mentioned in the techrider but after some searching I think any good small speaker would do? Some people recommend compact PA systems like this 
 
 <div style="text-align: center; max-width: 100%; margin: 1em 0;">
-  <img src="image-2.png" alt="Mackie SRM150" style="max-width: 50% height: auto; display: block; margin: 0 auto;">
+  <img src="image-2.png" alt="Mackie SRM150" style="max-height: 20vw; display: block; margin: 0 auto;">
   <div style="margin-top: 0.5em; font-style: italic;">Mackie SRM150</div>
 </div>
 
@@ -111,7 +145,7 @@ Thinking of which, they requested 6 wedges at the start of the document but in t
 ### Drum
 
 <div style="text-align: center; max-width: 100%; margin: 1em 0;">
-  <img src="image-3.png" alt="Drum kit" style="max-width: 60% height: auto; display: block; margin: 0 auto;">
+  <img src="image-3.png" alt="Drum kit" style="max-width: 60%; height: auto; display: block; margin: 0 auto;">
   <div style="margin-top: 0.5em; font-style: italic;">Drum Kit</div>
 </div>
 
@@ -168,14 +202,14 @@ Hartke HD 410 - Cabinet
 - The Shure Beta 91A has a half cardioid pickup polar pattern while the 52A has a supercardioid pickup. The 91A's frequency response range is 20Hz to 20kHz whereas the 52A only has 20Hz - 10kHz. Both of these microphones are tuned with frequency response curves suitable for kick drums
 
 <div style="text-align: center; max-width: 100%; margin: 1em 0;">
-  <img src="image-27.png" alt="Shure Beta 52A (Left) and 91A (Right)" style="max-width: 60% height: auto; display: block; margin: 0 auto;">
+  <img src="image-27.png" alt="Shure Beta 52A (Left) and 91A (Right)" style="max-width: 60%; height: auto; display: block; margin: 0 auto;">
   <div style="margin-top: 0.5em; font-style: italic;">Shure Beta 52A (Left) and 91A (Right)</div>
 </div>
 
 - Both the Shure SM57 and the Sennheiser e604 are dynamic microphones have a cardioid polar pattern. They have 40Hz-15000kHz and 40Hz-18000kHz response range respectively. Both are marketed towards recording percussion instruments (like drums), and Sennheiser explicitly mentions use with snares. The perference for snare bottom being Shure may be one gained through experience.
 
 <div style="text-align: center; max-width: 100%; margin: 1em 0;">
-  <img src="image-28.png" alt="Shure SM57 (Left) and Sennheiser e904 (Right)" style="max-width: 60% height: auto; display: block; margin: 0 auto;">
+  <img src="image-28.png" alt="Shure SM57 (Left) and Sennheiser e904 (Right)" style="max-width: 60%; height: auto; display: block; margin: 0 auto;">
   <div style="margin-top: 0.5em; font-style: italic;">Shure SM57 (Left) and Sennheiser e904 (Right)</div>
 </div>
 
@@ -203,21 +237,21 @@ Hartke HD 410 - Cabinet
 - There is also a Shure WBH53 mentioned, which is an omnidirectional condenser mic that can be worn on the head, possibly for hands-free segments and spoken parts
 
 <div style="text-align: center; max-width: 100%; margin: 1em 0;">
-  <img src="image-31.png" alt="Shure WBH53" style="max-width: 60% height: auto; display: block; margin: 0 auto;">
+  <img src="image-31.png" alt="Shure WBH53" style="max-height: 30vw; display: block; margin: 0 auto;">
   <div style="margin-top: 0.5em; font-style: italic;">Shure WBH53</div>
 </div>
 
 - The Sennheiser MKH 416 is a shotgun microphone that is highly directional and records sound only coming from the front.
 
 <div style="text-align: center; max-width: 100%; margin: 1em 0;">
-  <img src="image-34.png" alt="Sennheiser MKH 416" style="max-width: 60% height: auto; display: block; margin: 0 auto;">
+  <img src="image-34.png" alt="Sennheiser MKH 416" style="max-width: 60%; height: auto; display: block; margin: 0 auto;">
   <div style="margin-top: 0.5em; font-style: italic;">Sennheiser MKH 416</div>
 </div>
 
 - **Hotshot?** Hotshot is a microphone switcher which can be used to reroute the output channel of the microphone connect to it (apparently with no pops as advertised on their website.) This allows the performer to switch between performing for the PA to communicating with the crew (talkback) seamlessly. It also provides 48V phantom power to the mic.
 
 <div style="text-align: center; max-width: 100%; margin: 1em 0;">
-  <img src="image-30.png" alt="Hotshot 48V" style="max-width: 50% height: auto; display: block; margin: 0 auto;">
+  <img src="image-30.png" alt="Hotshot 48V" style="max-width: 50%; height: auto; display: block; margin: 0 auto;">
   <div style="margin-top: 0.5em; font-style: italic;">Hotshot 48V</div>
 </div>
 
@@ -227,74 +261,74 @@ We've already seen about all the outputs in the previous sections.
 
 ###### here is a picture gallery
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; justify-items: center; margin: 2rem 0;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; justify-items: center; margin: 2rem 0; font-size: 0.8rem">
   
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-4.png" alt="Sharpy (not sharpie, thats a marker!)" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Sharpy (not sharpie, thats a marker!)</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-5.png" alt="Moving-Head Wash" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Moving-Head Wash</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-6.png" alt="LED PAR" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">LED PAR</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-7.png" alt="Warm PAR" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Warm PAR</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-8.png" alt="Profile Spotlight" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Profile Spotlight</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-9.png" alt="RGB Strobe Light" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">RGB Strobe Light</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-10.png" alt="4-way Molefay Blinder" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">4-way Molefay Blinder</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-11.png" alt="2-way Molefay Blinder" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">2-way Molefay Blinder</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-12.png" alt="Haze Machine" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Haze Machine</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-13.png" alt="Fog (Smoke) Machine" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Fog (Smoke) Machine</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-14.png" alt="RGB LED Batten" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">RGB LED Batten</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-15.png" alt="Follow Spot" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Follow Spot</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-16.png" alt="Avolite Arena" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Avolite Arena</div>
   </div>
 
-  <div style="width: 100%; max-width: 30%;">
+  <div style="width: 100%; max-width: 40%;">
     <img src="image-17.png" alt="Avolite Tiger Touch II" style="width: 100%; border-radius: 0.65rem;">
     <div style="text-align: center; margin-top: 0.5rem; color: #ccc;">Avolite Tiger Touch II</div>
   </div>
