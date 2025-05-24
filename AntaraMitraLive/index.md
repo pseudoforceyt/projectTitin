@@ -1,10 +1,10 @@
 ---
 layout: about
 ---
-
-#### FAV Alternative Task - Pragyan Techrider Analysis
-
-#### By: Ilamparithi
+<div style="text-align: center; max-width: 100%; margin: 1em 0;">
+  <h4>FAV Alternative Task - Pragyan Techrider Analysis</h4>
+  <h4>Ilamparithi M (107124046)</h4>
+</div>
 
 # What is a Techrider?
 A technical rider is a document that lists the technical requirements and setup that is needed for the performance by the event's production agency. It is shared to the event venue and organizers before the event to ensure that the requirements are fulfilled before the event.
