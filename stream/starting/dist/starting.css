@@ -13,11 +13,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0.08; /* optional for subtlety */
-  width: 200px; /* adjust size as needed */
-  height: 200px; /* ensure it's square */
-  z-index: 1; /* behind text and circles */
-  pointer-events: none; /* make it non-interactive */
+  opacity: 0.8; 
+  width: 200px; 
+  height: 200px; 
+  z-index: 1; 
+  pointer-events: none;
+  filter: blur(3px);
 }
 
 .loading {
