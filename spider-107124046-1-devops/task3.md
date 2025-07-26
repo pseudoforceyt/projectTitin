@@ -9,9 +9,13 @@ layout: about
 ```
 Called Shebang [derived from **sh**arp-**bang** or ha**sh**-**bang**], also a comment but a special one. This line at the start of shell scripts defines the interpreter to be used to run the script. It can be shells (`sh, bash, zsh, fish, etc.,`), another script (only on Linux and Minix), or other interpreters like python, ruby, perl, awk, sed, etc.
 
+---
+
 ### Other interpreters in shell scripts
 
 We can define executables of other interpreters in the shebang and write the script in that language. For example, a python script can be prepended with `#!/usr/bin/python3` (or wherever it is available. if not known, by using `#!/usr/bin/env python3` to get it from PATH), and executed with `./scriptname` (extension not necessary in giving the file name).
+
+---
 
 ### sudo while running script and sudo inside the script - all possible combinations
 
@@ -21,6 +25,8 @@ We can define executables of other interpreters in the shebang and write the scr
 | 2. Run script with `sudo`        | `sudo` used inside script | `sudo` inside script becomes redundant but works                         |
 | 3. Run script without `sudo`     | `sudo` used inside script | Only commands prefixed with `sudo` run as root. PASSWORD IS PROMPTED WHEN RUN MANUALLY IN THE TERMINAL.    |
 | 4. Run script without `sudo`     | No `sudo` inside script   | Entire script runs as normal user, privileged commands fail           |
+
+---
 
 ### [] [[]] (())
 
@@ -33,6 +39,8 @@ Sidenote on exploration: ERE does not support back references (`(character class
 ( ) = run commands inside a subshell, can be nested to run subshells inside subshells like this `( ( ) )`, not like this:
 
 (( )) = arithmetic evaluations in C syntax
+
+---
 
 ### Folders in / of linux
 
@@ -60,6 +68,8 @@ Sidenote on exploration: ERE does not support back references (`(character class
 | `/usr`        | **Us**e**r** utilities and applications (multi-user programs, libraries, documentation)                             |
 | `/var`        | **Var**iable data (logs, spool files, caches, databases)                                                           |
 
+---
+
 ### Types of redirectors
 
 * `n>` : Output redirection (overwrites file) where n is the File Descriptor number [1=stdout, 2=stderr, 3 4 5 ... are custom file descriptors which can be "opened" by using it once]
@@ -68,12 +78,16 @@ Sidenote on exploration: ERE does not support back references (`(character class
 * `<<DELIMITER` : HereDoc (Bash only) - All lines upto DELIMITER are passed as stdin
 * `<<<` : HereString (Bash only) - String after <<< is passed to stdin
 
+---
+
 ### < > as operators instead of redirectors
 
 * \< \> can be used in test expression [ ]
 * < > can directly be used in extended test expression [[ ]]
 * The above two are for ascii based string comparison
 * All the numeric comparisons can be made inside (( )) with C syntax (where < > can be used without escaping as well)
+
+---
 
 ### grep awk sed tee
 
@@ -131,7 +145,7 @@ condition { action }
 ...
 ```
 
-The `action`s are AWK commands, which can be function calls, variable assignments, calculations, or any combination of those. Users can also define functions:
+The `action`s are AWK commands, which can be function calls, variable assignments, calculations, or any combination of those. There are constructs for loops and conditionals as well. Users can also define functions:
 
 ```awk
 function add_three(number) {
@@ -168,6 +182,8 @@ tee [-a] [-i] [file...]
 * `-a` Append to a file rather than overwriting
 * `-i` Ignore interrupts
 
+---
+
 ### Nginx - all uses
 
 NGINX is a high-performance web server with multiple uses
@@ -182,6 +198,8 @@ NGINX is a high-performance web server with multiple uses
 
 Common Gateway Interface (CGI) is an interface specification that enables web servers to execute an external program to process HTTP or HTTPS user requests. Nginx supports FastCGI, which is an improved version of CGI (and micro WSGI or uWSGI - Web Server Gateway Interface).
 
+---
+
 ### (Forward) Proxy vs Reverse Proxy
 
 | Forward Proxy                                               | Reverse Proxy                                                                             |
@@ -190,6 +208,7 @@ Common Gateway Interface (CGI) is an interface specification that enables web se
 | Hides client’s identity (IP masking, content filtering, etc.)       | Hides internal server details (security, load distribution)                               |
 | Example: Accessing blocked sites via proxy                          | Example: NGINX forwarding requests to backend apps                                        |
 
+---
 
 ### More about the location block
 
@@ -217,7 +236,7 @@ Nginx supports 5 types of matching, each with different behavior and priority.
 | `~`      | **Regex** (case-sensitive)     | `location ~ \.php$`      | 4th      |
 | `~*`     | **Regex** (case-insensitive)   | `location ~* \.jpg$`     | 5th      |
 
-### Matching Order Logic
+#### Matching Order Logic
 
 When a request comes in, Nginx does the following:
 
@@ -288,6 +307,8 @@ location /api/ {
 
 Can also proxy with modified paths using regex captures.
 
+---
+
 ### Different types of volumes in docker, networking in docker
 
 #### Docker Volumes:
@@ -324,6 +345,10 @@ We can also directly mount block storage devices, such as an external drive, a d
 
 - none – No network connectivity. Complete isolation between the container and everything else.
 
+---
+
+[^1]
+
 ### USPs of cloud computing (what do you mean "there are 5 points"???)
 
 Cloud computing is a term used to describe the delivery of on-demand computing resources: hardware, storage, databases, networking, and software; to businesses and individuals via a network (usually the internet). Cloud computing enables organizations to access and store information without managing their own physical devices or IT infrastructure. 
@@ -350,11 +375,30 @@ Reputable cloud providers also hire top security experts and employ the most adv
 #### Data loss prevention
 Cloud providers offer backup and disaster recovery features. Storing data in the cloud rather than locally can help prevent data loss in the event of an emergency, such as hardware malfunction, malicious threats, or even simple user error. 
 
-### CNCF
+### Cloud Native Computing Foundation (CNCF)
+
+CNCF is a part of the Linux Foundation that fosters and sustains open-source projects critical to cloud-native computing. CNCF hosts projects like:
+
+- Kubernetes (container orchestration)
+- Prometheus (monitoring)
+- Envoy (service proxy)
+- Helm (Kubernetes package manager)
+
+The above are **graduated** projects, which are mature and used widely. The CNCF also incubates projects https://www.cncf.io/projects/
+
+The Foundation’s mission is to make cloud native computing ubiquitous (common, used everywhere).
 
 ### What is DevOps, what do we do in devops
 
+[DOCUMENT WORK IN PROGRESS, EXPECTED TO BE COMPLETE BEFORE 4PM]
+
 ### CI/CD - what why and how
+
+Continuous Integration (CI): Developers frequently merge code into a shared repository. Automated builds and tests validate each change.
+
+Continuous Delivery (CD): Code changes are automatically prepared for release to production.
+
+Continuous Deployment: Every change that passes automated tests is deployed automatically.
 
 ### Why Jenkins over GitHub Actions
 
@@ -364,4 +408,4 @@ Cloud providers offer backup and disaster recovery features. Storing data in the
 
 ### Where are `output`s stored in Terraform
 
-#- https://thedecisionlab.com/biases/the-sunk-cost-fallacy
+[^1]: https://thedecisionlab.com/biases/the-sunk-cost-fallacy
