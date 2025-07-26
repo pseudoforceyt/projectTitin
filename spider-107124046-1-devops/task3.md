@@ -188,13 +188,13 @@ tee [-a] [-i] [file...]
 
 NGINX is a high-performance web server with multiple uses
 
-- Web Server – Serves static content like HTML, CSS, JS, images.
-- Reverse Proxy – Forwards client requests to backend servers and returns their responses to the client.
-- Content Cache – Caches static or dynamic content to improve load times and reduce backend load.
-- Load Balancer – Distributes incoming traffic among multiple backend servers for high availability and scalability.
+- Web Server - Serves static content like HTML, CSS, JS, images.
+- Reverse Proxy - Forwards client requests to backend servers and returns their responses to the client.
+- Content Cache - Caches static or dynamic content to improve load times and reduce backend load.
+- Load Balancer - Distributes incoming traffic among multiple backend servers for high availability and scalability.
 - TCP/UDP Proxy and Mail Proxy
-- SSL/TLS Termination Proxy – Handles SSL handshakes and forwards decrypted traffic to backend services.
-- API Gateway (lightweight use cases) – Acts as an interface between client and microservices for routing, security, and throttling.
+- SSL/TLS Termination Proxy - Handles SSL handshakes and forwards decrypted traffic to backend services.
+- API Gateway (lightweight use cases) - Acts as an interface between client and microservices for routing, security, and throttling.
 
 Common Gateway Interface (CGI) is an interface specification that enables web servers to execute an external program to process HTTP or HTTPS user requests. Nginx supports FastCGI, which is an improved version of CGI (and micro WSGI or uWSGI - Web Server Gateway Interface).
 
@@ -313,18 +313,18 @@ Can also proxy with modified paths using regex captures.
 
 #### Docker Volumes:
 
-Named Volumes – Managed by Docker, persist data across container restarts. If unnamed, they are "anonymous" volumes.
+Named Volumes - Managed by Docker, persist data across container restarts. If unnamed, they are "anonymous" volumes.
 ```bash
 docker volume create my_volume
 docker run -v my_volume:/data alpine
 ```
 
-Bind Mounts – Map host directory (or file) to container directory (or file).
+Bind Mounts - Map host directory (or file) to container directory (or file).
 ```bash
 docker run -v /host/path:/container/path alpine
 ```
 
-tmpfs Mounts – In-memory storage, data lost on container restart.
+tmpfs Mounts - In-memory storage, data lost on container restart.
 ```bash
 docker run --tmpfs /tmpfs alpine
 ```
@@ -333,17 +333,17 @@ We can also directly mount block storage devices, such as an external drive, a d
 
 #### Docker Networking:
 
-- bridge (default) – Containers on same host can communicate.
+- bridge (default) - Containers on same host can communicate.
 
-- host – Shares host’s network stack (no isolation).
+- host - Shares host’s network stack (no isolation).
 
-- overlay – Connect multiple docker daemons (the background process that performs all the tasks) together.
+- overlay - Connect multiple docker daemons (the background process that performs all the tasks) together.
 
-- macvlan – Assigns MAC address to containers, making them appear as physical devices on the network.
+- macvlan - Assigns MAC address to containers, making them appear as physical devices on the network.
 
 - ipvlan - Allows assigning IPv4 and/or IPv6 addresses to containers 
 
-- none – No network connectivity. Complete isolation between the container and everything else.
+- none - No network connectivity. Complete isolation between the container and everything else.
 
 ---
 
@@ -388,21 +388,76 @@ The above are **graduated** projects, which are mature and used widely. The CNCF
 
 The Foundation’s mission is to make cloud native computing ubiquitous (common, used everywhere).
 
-### What is DevOps, what do we do in devops
+### DevOps - Developer Operations
 
-[DOCUMENT WORK IN PROGRESS, EXPECTED TO BE COMPLETE BEFORE 4PM]
+*There is no single "definition" for what DevOps is*
+
+DevOps is a set of practices that bridges the gap between software development (Dev) and IT operations (Ops) to deliver applications and services.
+
+DevOps encompasses necessary tasks of software development and can lead to shortening development time and improving the development **life cycle**.
+
+#### Life cycle?
+
+**Systems Development Life Cycle** (SDLC) is a process for planning, creating, testing, and deploying an information system. There are usually six stages in this cycle: requirement analysis, design, development and testing, implementation, documentation, and evaluation. Like anything that is manufactured on an assembly line, an SDLC aims to produce high-quality systems that meet or exceed expectations, based on requirements, by delivering systems within scheduled time frames and cost estimates.
+
+| Strengths                              | Weaknesses                                      |
+|----------------------------------------|-------------------------------------------------|
+| Control                                | Increased development time                      |
+| Monitor large projects                 | Increased development cost                      |
+| Detailed steps                         | Systems must be defined up front                |
+| Evaluate costs and completion targets  | Rigidity (difficult to adapt to changes once the process has started) |
+| Documentation                          | Hard to estimate costs, project overruns        |
+| Well defined user input                | User input is sometimes limited                 |
+| Ease of maintenance                    | Little parallelism (as the stages are sequential)    |
+| Development and design standards       | Automation of documentation and standards is limited |
+|                                        | Projects canned early on that result in little or no value |
+
+DevOps Research and Assessment (DORA), a group as part of Google Cloud, has developed a series of metrics which are intended to measure software development efficiency and reliability. These metrics include:
+
+- Deployment Frequency: Time between code deployments.
+- Mean Lead Time for Changes: Time between code commit and deployment.
+- Change Failure Rate: Percentage of deployments causing production issues.
+- Failed Deployment Recovery Time (formerly Mean Time To Recover)
+- Reliability (added in 2021): Measures operational performance, focusing on availability and adherence to user expectations.
 
 ### CI/CD - what why and how
 
 Continuous Integration (CI): Developers frequently merge code into a shared repository. Automated builds and tests validate each change.
 
-Continuous Delivery (CD): Code changes are automatically prepared for release to production.
+Continuous delivery and/or deployment (CD) is a 2 part process that refers to the integration, testing, and delivery of code changes. Continuous delivery stops short of automatic production deployment, while continuous deployment automatically releases the updates into the production environment.
 
-Continuous Deployment: Every change that passes automated tests is deployed automatically.
+Taken together, these connected practices are often referred to as a "CI/CD pipeline" and are supported by development and operations teams working together.
+
+Tools: Jenkins, GitLab CI/CD, GitHub Actions, ArgoCD.
+
+CI/CD helps organizations avoid bugs and code failures while maintaining a continuous cycle of software development and updates. As apps grow larger, features of CI/CD can help decrease complexity, increase efficiency, and streamline workflows.
 
 ### Why Jenkins over GitHub Actions
 
+| Jenkins                                | GitHub Actions                     |
+| -------------------------------------- | ---------------------------------- |
+| Full infrastructure control            | Fully managed (SaaS-first)         |
+| Highly customizable pipelines          | Quick setup, simpler YAML workflows|
+| Rich plugin ecosystem                  | Native GitHub integrations         |
+| Good for enterprise-scale CI/CD        | Great for small to medium projects |
+| Can work with any VCS (Git, SVN, etc.) | GitHub only                        |
+| Complex agent resource management      | Simple runners, limited control    |
+
 ### Microservices Architecture
+
+Microservices - also known as the microservice architecture - is an architectural style that structures an application as a collection of two or more services that are independently deployable and loosely coupled. These individual services are typically organized around business capabilities where each service is often owned/managed by a single, small team. Adopting microservices often goes hand in hand with DevOps, since they are the basis for continuous delivery practices that allow teams to adapt quickly to user requirements.
+
+A monolithic architecture is a traditional model of a software program, which is built as a unified unit that is self-contained and independent from other applications.
+
+Disadvantages of a monolithic architecture:
+- Slower development speed – A large, monolithic application makes development more complex and slower.
+- Scalability – You can’t scale individual components.
+- Reliability – If there’s an error in any module, it could affect the entire application’s availability.
+- Barrier to technology adoption – Any changes in the framework or language affects the entire application, making changes often expensive and time-consuming.
+- Lack of flexibility – A monolith is constrained by the technologies already used in the monolith.
+- Deployment – A small change to a monolithic application requires the redeployment of the entire monolith.
+
+Adopting the microservices architecture addresses all these disadvantages, at the cost of some of the simplicity that monoliths offer. There are more services in more places created by multiple teams, each new microservice can have its own infrastructural cost, the organizational overhead, and so on.
 
 ### About Terraform
 
