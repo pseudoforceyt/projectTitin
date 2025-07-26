@@ -30,3 +30,6 @@ theme: minima
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+markdown: kramdown
+highlighter: rouge

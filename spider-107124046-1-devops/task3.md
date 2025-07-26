@@ -214,7 +214,7 @@ Common Gateway Interface (CGI) is an interface specification that enables web se
 
 The `location` block is used inside a `server` block to define how Nginx should respond to specific request URIs.
 
-It’s critical for routing requests, proxying, rewriting, restricting access, and more.
+It is critical for routing requests, proxying, rewriting, restricting access, and more.
 
 #### Basic Syntax
 
@@ -283,7 +283,7 @@ location /img/ {
 
 With `alias`, the path after the match is **not** appended.
 
-#### `try_files` — Best for SPA or fallbacks
+#### `try_files` — Best for Single Page Applications (SPAs) or fallbacks
 
 ```nginx
 location / {
