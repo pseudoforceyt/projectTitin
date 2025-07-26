@@ -375,6 +375,8 @@ Reputable cloud providers also hire top security experts and employ the most adv
 #### Data loss prevention
 Cloud providers offer backup and disaster recovery features. Storing data in the cloud rather than locally can help prevent data loss in the event of an emergency, such as hardware malfunction, malicious threats, or even simple user error. 
 
+---
+
 ### Cloud Native Computing Foundation (CNCF)
 
 CNCF is a part of the Linux Foundation that fosters and sustains open-source projects critical to cloud-native computing. CNCF hosts projects like:
@@ -387,6 +389,8 @@ CNCF is a part of the Linux Foundation that fosters and sustains open-source pro
 The above are **graduated** projects, which are mature and used widely. The CNCF also incubates projects https://www.cncf.io/projects/
 
 The Foundation’s mission is to make cloud native computing ubiquitous (common, used everywhere).
+
+---
 
 ### DevOps - Developer Operations
 
@@ -420,6 +424,8 @@ DevOps Research and Assessment (DORA), a group as part of Google Cloud, has deve
 - Failed Deployment Recovery Time (formerly Mean Time To Recover)
 - Reliability (added in 2021): Measures operational performance, focusing on availability and adherence to user expectations.
 
+---
+
 ### CI/CD - what why and how
 
 Continuous Integration (CI): Developers frequently merge code into a shared repository. Automated builds and tests validate each change.
@@ -432,6 +438,8 @@ Tools: Jenkins, GitLab CI/CD, GitHub Actions, ArgoCD.
 
 CI/CD helps organizations avoid bugs and code failures while maintaining a continuous cycle of software development and updates. As apps grow larger, features of CI/CD can help decrease complexity, increase efficiency, and streamline workflows.
 
+---
+
 ### Why Jenkins over GitHub Actions
 
 | Jenkins                                | GitHub Actions                     |
@@ -442,6 +450,8 @@ CI/CD helps organizations avoid bugs and code failures while maintaining a conti
 | Good for enterprise-scale CI/CD        | Great for small to medium projects |
 | Can work with any VCS (Git, SVN, etc.) | GitHub only                        |
 | Complex agent resource management      | Simple runners, limited control    |
+
+---
 
 ### Microservices Architecture
 
@@ -459,8 +469,34 @@ Disadvantages of a monolithic architecture:
 
 Adopting the microservices architecture addresses all these disadvantages, at the cost of some of the simplicity that monoliths offer. There are more services in more places created by multiple teams, each new microservice can have its own infrastructural cost, the organizational overhead, and so on.
 
+---
+
 ### About Terraform
+
+Terraform is an infrastructure as code (IaC) tool that lets you define both cloud (and on-premises!) resources in human-readable configuration files that you can version, reuse, and share. A workflow can also be used to provision and manage all of the infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.
+
+Terraform creates and manages resources on cloud platforms and other services through their application programming interfaces (APIs). **Providers** enable Terraform to work with virtually any platform or service with an accessible API.
+
+The core Terraform workflow consists of three stages:
+
+- Write: You define resources, which may be across multiple cloud providers and services.
+- Plan: Terraform creates an execution plan describing the infrastructure it will create, update, or destroy based on the existing infrastructure and your configuration.
+- Apply: On approval, Terraform performs the proposed operations in the correct order, respecting any resource dependencies. For example, if you update the properties of a VPC and change the number of virtual machines in that VPC, Terraform will recreate the VPC before scaling the virtual machines.
+
+Terraform must store **"state"** about our managed infrastructure and configuration. This state is used by Terraform to map real world resources to our configuration, keep track of metadata, and to improve performance for large infrastructures. This state is stored by default in a *local* file named "terraform.tfstate", but can be stored *remotely* as well by changing the **backend**. This backend is what stores the state files of the infrastructure. A remote backend allows for centralised state management and to avoid conflicts in event of simultaneous runs of `terraform apply`.
+
+Input variables (or just **variables**) let you customize aspects of Terraform modules without altering the module's own source code. This functionality allows you to share modules across different Terraform configurations, making your module **composable and reusable**. Input variables are like function arguments in programming languages. To set lots of variables, it is more convenient to specify their values in a variable definitions file (with a filename ending in either .tfvars or .tfvars.json) and then specify that file on the command line with -var-file: `terraform apply -var-file="testing.tfvars"`
+
+**Output** values make information about your infrastructure available on the command line, and can expose information for other Terraform configurations to use. Output values are similar to return values in programming languages. After running `terraform apply`, the output values are stored in the state file. To avoid this storage, `ephemeral` outputs (added in Terraform 1.10) can be declared. This is useful for managing credentials, tokens, or other temporary resources you do not want to store in Terraform state files.
+
+---
 
 ### Where are `output`s stored in Terraform
 
+Answered in previous heading
+
+***
+
 [^1]: https://thedecisionlab.com/biases/the-sunk-cost-fallacy
+
+###### PS: thanks to the one that asked me to take note of these questions in my laptop when i took out my phone to do so in Google Keep. when it shut down after the battery was fully drained, the notes were gone and i had to reconstruct the above from my memory.
