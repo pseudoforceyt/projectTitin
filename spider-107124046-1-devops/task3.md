@@ -5,7 +5,7 @@ layout: about
 ### \#! in bash
 
 ```bash
-\\\\#! interpreter \\\\\\\[optional-one-arg-only]
+#! interpreter [optional-one-arg-only]
 ```
 Called Shebang [derived from **sh**arp-**bang** or ha**sh**-**bang**], also a comment but a special one. This line at the start of shell scripts defines the interpreter to be used to run the script. It can be shells (`sh, bash, zsh, fish, etc.,`), another script (only on Linux and Minix), or other interpreters like python, ruby, perl, awk, sed, etc.
 
@@ -19,8 +19,8 @@ We can define executables of other interpreters in the shebang and write the scr
 |----------------------------------|---------------------------|--------------------------------------------------------------------------|
 | 1. Run script with `sudo`        | No `sudo` inside script   | Entire script runs as root                                               |
 | 2. Run script with `sudo`        | `sudo` used inside script | `sudo` inside script becomes redundant but works                         |
-| 3. Run script without `sudo`     | `sudo` used inside script | Only commands prefixed with `sudo` run as root. PASSWORD IS PROMPTED     |
-| 4. Run script without `sudo`     | No `sudo` inside script   | Entire script runs as normal user privileged commands **fail**           |
+| 3. Run script without `sudo`     | `sudo` used inside script | Only commands prefixed with `sudo` run as root. PASSWORD IS PROMPTED WHEN RUN MANUALLY IN THE TERMINAL.    |
+| 4. Run script without `sudo`     | No `sudo` inside script   | Entire script runs as normal user, privileged commands fail           |
 
 ### [] [[]] (())
 
@@ -28,7 +28,7 @@ We can define executables of other interpreters in the shebang and write the scr
 
 [[ <test> ]] - (not supported in Bourne Shell `sh`) extended testing with bash's own evaluator (with Extended Regex Engine regex matching if `=~` is used)
 
-Sidenote on exploration: ERE does not support back references (`(character class 1)<some other expression>\\\\\\\\1`) and lookaheads/lookbehinds [`something(?=which has this ahead of it)`/`(?<=behind something there is this)something`]
+Sidenote on exploration: ERE does not support back references (`(character class 1)<some other expression>\1`) and lookaheads/lookbehinds [`something(?=which has this ahead of it)`/`(?<=behind something there is this)something`]
 
 ( ) = run commands inside a subshell, can be nested to run subshells inside subshells like this `( ( ) )`, not like this:
 
@@ -62,11 +62,11 @@ Sidenote on exploration: ERE does not support back references (`(character class
 
 ### Types of redirectors
 
-* `n>`	: Output redirection (overwrites file) where n is the File Descriptor number [1=stdout, 2=stderr, 3 4 5 ... are custom file descriptors which can be "opened" by using it once]
-* `n>>`	: Output redirection (appends file)
-* `<`	: Input redirection (sends stdin to LHS)
-* `<<`	: HereDoc (Bash only)
-* `<<<`	: HereString (Bash only)
+* `n>` : Output redirection (overwrites file) where n is the File Descriptor number [1=stdout, 2=stderr, 3 4 5 ... are custom file descriptors which can be "opened" by using it once]
+* `n>>` : Output redirection (appends file)
+* `<` : Input redirection (sends stdin to LHS)
+* `<<DELIMITER` : HereDoc (Bash only) - All lines upto DELIMITER are passed as stdin
+* `<<<` : HereString (Bash only) - String after <<< is passed to stdin
 
 ### < > as operators instead of redirectors
 
@@ -82,16 +82,16 @@ Sidenote on exploration: ERE does not support back references (`(character class
 
 About the arguments I used:
 
--v, --invert-match  
+`-v, --invert-match`  
        Invert the sense of matching, to select non-matching lines.  
--A NUM, --after-context=NUM  
+`-A NUM, --after-context=NUM`  
        Print  NUM  lines of trailing context after matching lines.  
--F, --fixed-strings  
+`-F, --fixed-strings`  
        Interpret PATTERNS as fixed strings, not regular expressions.  
--x, --line-regexp  
+`-x, --line-regexp`  
        Select only those matches that exactly match the whole line. For a regular expression pattern, this is  
        like parenthesizing the pattern and then surrounding it with ^ and $.  
--f FILE, --file=FILE  
+`-f FILE, --file=FILE`  
        Obtain patterns from FILE, one per line.  
 
 EXIT STATUS
@@ -114,28 +114,241 @@ grep -vxFf <(printf "%s\n" "${invalid[@]}") "$file" > "$tmp_file" && mv "$tmp_fi
 
 Since stream editor was made based on the "ed" editor, the commands also resemble those in ed.
 
-#### AWK - (abbreviation of creators names, indha kelvi inga mukkiyam illa)
+Most common usage of sed is for its substitution command `s/substitute first occurrence/with something else/` `s/or globally substitute/with something else/g`
 
-It is a pattern scanning and processing language
+The delimiter / is from the search operation in ed. Other characters can also be used as delimiter (defined by the first character after the first command `s`).
 
-#### TEE
+Streams can be edited in-place with `-i` (a temporary output file is created in the background, and then the original file is replaced by the temporary file)
+
+#### AWK
+(abbreviation of creators names, indha kelvi inga mukkiyam illa)
+
+It is a pattern scanning and processing language. Preceded by sed and served as an inspiration for Perl, it is a powerful construct for line based input processing. An AWK program is a series of pattern action pairs, written as:
+
+```awk
+condition { action }
+condition { action }
+...
+```
+
+The `action`s are AWK commands, which can be function calls, variable assignments, calculations, or any combination of those. Users can also define functions:
+
+```awk
+function add_three(number) {
+    return number + 3
+}
+```
+
+AWK's built-in variables include the field variables: $1, $2, $3, and so on ($0 represents the entire record). They hold the text or values in the individual text-fields in a record.
+
+Other variables include:
+
+- `NR`: Number of Records. Keeps a current count of the number of input records read so far from all data files. It starts at zero, but is never automatically reset to zero.
+- `FNR`: File Number of Records. Keeps a current count of the number of input records read so far in the current file. This variable is automatically reset to zero each time a new file is started.
+- `NF`: Number of Fields. Contains the number of fields in the current input record. The last field in the input record can be designated by `$NF`, the 2nd-to-last field by `$(NF-1)`, the 3rd-to-last field by `$(NF-2)`, etc.
+- `FILENAME`: Contains the name of the current input-file.
+- `FS`: Field Separator. Contains the "field separator" used to divide fields in the input record. The default, "white space", allows any sequence of space and tab characters. `FS` can be reassigned with another character or character sequence to change the field separator.
+- `RS`: Record Separator. Stores the current "record separator" character. Since, by default, an input line is the input record, the default record separator character is a "newline".
+- `OFS`: Output Field Separator. Stores the "output field separator", which separates the fields when `awk` prints them. The default is a "space" character.
+- `ORS`: Output Record Separator. Stores the "output record separator", which separates the output records when `awk` prints them. The default is a "newline" character.
+- `OFMT`: Output Format. Stores the format for numeric output. The default format is `"%.6g".
+
+This makes it most useful to handle files with fields and records, such as csv files.
+
+In the interest of time, I am pausing my exploration of awk here.
+
+#### tee
+
+A shell command that copies stdin to one or more files in addition to stdout. \*nix tee:
+
+```bash
+tee [-a] [-i] [file...]
+```
+* `file...` One or more names for files to receive the command input data
+* `-a` Append to a file rather than overwriting
+* `-i` Ignore interrupts
 
 ### Nginx - all uses
+
+NGINX is a high-performance web server with multiple uses
+
+- Web Server – Serves static content like HTML, CSS, JS, images.
+- Reverse Proxy – Forwards client requests to backend servers and returns their responses to the client.
+- Content Cache – Caches static or dynamic content to improve load times and reduce backend load.
+- Load Balancer – Distributes incoming traffic among multiple backend servers for high availability and scalability.
+- TCP/UDP Proxy and Mail Proxy
+- SSL/TLS Termination Proxy – Handles SSL handshakes and forwards decrypted traffic to backend services.
+- API Gateway (lightweight use cases) – Acts as an interface between client and microservices for routing, security, and throttling.
+
+Common Gateway Interface (CGI) is an interface specification that enables web servers to execute an external program to process HTTP or HTTPS user requests. Nginx supports FastCGI, which is an improved version of CGI (and micro WSGI or uWSGI - Web Server Gateway Interface).
 
 ### (Forward) Proxy vs Reverse Proxy
 
 | Forward Proxy                                               | Reverse Proxy                                                                             |
 | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Sits **between client and internet** (e.g., client -> proxy -> web) | Sits **between internet and servers** (e.g., client -> reverse proxy -> internal servers) |
+| Sits **between client and internet** (ex: client -> proxy -> web) | Sits **between internet and servers** (ex: client -> reverse proxy -> internal servers) |
 | Hides client’s identity (IP masking, content filtering, etc.)       | Hides internal server details (security, load distribution)                               |
 | Example: Accessing blocked sites via proxy                          | Example: NGINX forwarding requests to backend apps                                        |
 
 
 ### More about the location block
 
-### Docker, different types of volumes in docker, networking in docker
+The `location` block is used inside a `server` block to define how Nginx should respond to specific request URIs.
 
-### Cloud computing and USPs of cloud computing (5 points)
+It’s critical for routing requests, proxying, rewriting, restricting access, and more.
+
+#### Basic Syntax
+
+```nginx
+location [modifier] <pattern> {
+    # actions for matching URIs
+}
+```
+
+#### Types of Location Matching (Modifiers)
+
+Nginx supports 5 types of matching, each with different behavior and priority.
+
+| Modifier | Type                           | Example                  | Priority |
+| -------- | ------------------------------ | ------------------------ | -------- |
+| `=`      | **Exact** match                | `location = /about.html` | 1st      |
+| `^~`     | **Prefix** match (stop search) | `location ^~ /static/`   | 2nd      |
+| *(none)* | **Prefix** match               | `location /images/`      | 3rd      |
+| `~`      | **Regex** (case-sensitive)     | `location ~ \.php$`      | 4th      |
+| `~*`     | **Regex** (case-insensitive)   | `location ~* \.jpg$`     | 5th      |
+
+### Matching Order Logic
+
+When a request comes in, Nginx does the following:
+
+1. Checks for **exact match** (`=`).
+2. Then **prefix match with `^~`**.
+3. Then **all regex matches** (`~`, `~*`).
+4. Finally, **longest regular prefix match** (no modifier).
+
+If a regex match occurs, it takes precedence over plain prefix matches unless `^~` is used.
+
+#### Common Directives Inside `location`
+
+| Directive      | Purpose                                                            |
+| -------------- | ------------------------------------------------------------------ |
+| `root`         | Set root directory for this location                               |
+| `alias`        | Map location to different path (important distinction from `root`) |
+| `try_files`    | Serve files or fallback to something else                          |
+| `proxy_pass`   | Forward request to a backend (reverse proxy)                       |
+| `return`       | Return a specific status or redirect                               |
+| `rewrite`      | Rewrite the request URI                                            |
+| `add_header`   | Add custom headers                                                 |
+| `limit_except` | Restrict methods (e.g., GET, POST)                                 |
+| `auth_basic`   | Enable basic HTTP authentication                                   |
+
+#### `root` Example
+
+```nginx
+location /img/ {
+    root /data;
+}
+```
+
+**Request**: `/img/cat.jpg` looks for `/data/img/cat.jpg`
+
+#### `alias` Example
+
+```nginx
+location /img/ {
+    alias /data/images/;
+}
+```
+
+**Request**: `/img/cat.jpg` looks for `/data/images/cat.jpg`
+
+With `alias`, the path after the match is **not** appended.
+
+#### `try_files` — Best for SPA or fallbacks
+
+```nginx
+location / {
+    try_files $uri $uri/ /index.html;
+}
+```
+
+If the uri is `/about`, Nginx checks:
+
+1. `/about`
+2. `/about/`
+3. `/index.html`
+
+#### `proxy_pass` — Reverse Proxy
+
+```nginx
+location /api/ {
+    proxy_pass http://127.0.0.1:4000/;
+}
+```
+
+Can also proxy with modified paths using regex captures.
+
+### Different types of volumes in docker, networking in docker
+
+#### Docker Volumes:
+
+Named Volumes – Managed by Docker, persist data across container restarts. If unnamed, they are "anonymous" volumes.
+```bash
+docker volume create my_volume
+docker run -v my_volume:/data alpine
+```
+
+Bind Mounts – Map host directory (or file) to container directory (or file).
+```bash
+docker run -v /host/path:/container/path alpine
+```
+
+tmpfs Mounts – In-memory storage, data lost on container restart.
+```bash
+docker run --tmpfs /tmpfs alpine
+```
+
+We can also directly mount block storage devices, such as an external drive, a drive partition, or a loop device.
+
+#### Docker Networking:
+
+- bridge (default) – Containers on same host can communicate.
+
+- host – Shares host’s network stack (no isolation).
+
+- overlay – Connect multiple docker daemons (the background process that performs all the tasks) together.
+
+- macvlan – Assigns MAC address to containers, making them appear as physical devices on the network.
+
+- ipvlan - Allows assigning IPv4 and/or IPv6 addresses to containers 
+
+- none – No network connectivity. Complete isolation between the container and everything else.
+
+### USPs of cloud computing (what do you mean "there are 5 points"???)
+
+Cloud computing is a term used to describe the delivery of on-demand computing resources: hardware, storage, databases, networking, and software; to businesses and individuals via a network (usually the internet). Cloud computing enables organizations to access and store information without managing their own physical devices or IT infrastructure. 
+
+#### Faster time to market
+You can spin up new instances or retire them in seconds, allowing developers to accelerate development with quick deployments.
+
+#### Scalability and flexibility
+You can quickly scale resources and storage up to meet business demands without having to invest in physical infrastructure.
+
+Companies don’t need to pay for or build the infrastructure needed to support their highest load levels. Likewise, they can quickly scale down if resources aren’t being used.
+
+#### Cost savings
+You only pay for the resources you actually use ("Pay as you go"). This helps you avoid overbuilding and overprovisioning your data center and gives your IT teams back valuable time to focus on more strategic work. 
+
+#### Better collaboration
+Cloud storage enables you to make data available anywhere you are, anytime you need it. Instead of being tied to a location or specific device, people can access data from anywhere in the world from any device—as long as they have an internet connection.
+
+#### Advanced security
+Despite popular perceptions, cloud computing can actually strengthen your security posture because of the depth and breadth of security features, automatic maintenance, and centralized management.
+
+Reputable cloud providers also hire top security experts and employ the most advanced solutions, providing more robust protection. 
+
+#### Data loss prevention
+Cloud providers offer backup and disaster recovery features. Storing data in the cloud rather than locally can help prevent data loss in the event of an emergency, such as hardware malfunction, malicious threats, or even simple user error. 
 
 ### CNCF
 
@@ -143,8 +356,12 @@ It is a pattern scanning and processing language
 
 ### CI/CD - what why and how
 
+### Why Jenkins over GitHub Actions
+
 ### Microservices Architecture
 
 ### About Terraform
 
 ### Where are `output`s stored in Terraform
+
+#- https://thedecisionlab.com/biases/the-sunk-cost-fallacy
